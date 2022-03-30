@@ -24,3 +24,31 @@ console.log(document.body.children[1].children[1]);
 // first we have to grab the element in the html by it's id
 let unnoticedKid = document.getElementById("unnoticed-kid");
 unnoticedKid.style.color = "#5ca4a9";
+
+//get body properties
+let backgroundColor = document.body.style.backgroundColor = "#f3f3f4";
+let fontColor = document.body.style.color = "#080808";
+
+
+const darkMode = ()=>{
+    backgroundColor = document.body.style.backgroundColor = "#080808";
+    fontColor = document.body.style.color = "#f3f3f4";
+}
+
+const lightMode = ()=>{
+    backgroundColor = document.body.style.backgroundColor = "#f3f3f4";
+    fontColor = document.body.style.color ="#080808";
+}
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", ()=>{
+    if(backgroundColor === '#080808'){
+        lightMode();
+        console.log("light Mode")
+    } else if (backgroundColor === '#f3f3f4'){
+        darkMode()
+        console.log("dark mode")
+    }
+});
+
